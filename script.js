@@ -1,4 +1,5 @@
 const myLibrary = [];
+const addBookBtn = document.querySelector("#addBook");
 
 function Book(id, name, genre, author) {
     this.id = id;
@@ -8,8 +9,14 @@ function Book(id, name, genre, author) {
 };
 
 function addBookToLibrary(){
-    let id = self.crypto.randomUUID();
-    const book = new Book(id, 
-        
+    const id = self.crypto.randomUUID();
+
+    const book = new Book(
+        id, 
+
     );
 };
+
+addBookBtn.addEventListener("Click", () => {
+    addBookToLibrary();
+});

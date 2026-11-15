@@ -1,3 +1,10 @@
+:root {
+    --background-color: #28301C;
+    --secondary-background-color: #323D25;
+    --third-color: #9A7E3B;
+    --font-color: #D2CF9A;
+}
+
 /* Apply box-sizing globally */
 *,
 *::before,
@@ -12,7 +19,7 @@
 body {
   width: auto;
   line-height: 1.5s;
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased; */
   font-family: var(--primary-font);
 }
 
@@ -28,6 +35,42 @@ svg {
 
 main {
     display: grid;
-    height: 100dvh;
+    min-height: 100dvh;
     width: auto;
+    background-color: var(--background-color);
+}
+
+button > svg{
+    height: auto;
+    width: 24px;
+}
+
+
+button > h1 {
+    font-size: 20px;
+}
+
+.add-btn {
+    display: flex;
+    flex: 0;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--font-color);
+    background-color: var(--font-color);
+    color: var(--background-color);
+    justify-content: center;
+    position: fixed;
+    height: 3rem;
+    width: 10rem;
+    right: 1%;
+    bottom: 1%;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+}
+
+.add-btn:active {
+    background-color: var(--secondary-background-color);
+    color: var(--font-color);
 }
