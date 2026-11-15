@@ -8,5 +8,8 @@ function Book(id, name, genre, author) {
 };
 
 function addBookToLibrary(){
-    
+    let id = self.crypto.randomUUID();
+    const book = new Book(id, 
+        
+    );
 };
