@@ -9,12 +9,50 @@
 </head>
 <body>
     <main>
+        <section class="card-section">
+            
+        </section>
         <button class="add-btn" id="add-book">
             <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
             </svg>
             <h1>Add Book</h1>
         </button>
+        <dialog>
+            <form action="dialog">
+                <label for="book-name">
+                    Book Name *
+                </label>
+                <input 
+                    type="text" 
+                    id="book-name" 
+                    name="book-name" 
+                    required
+                />
+                <label for="author">
+                    Author *
+                </label>
+                <input 
+                    type="text" 
+                    id="author" 
+                    name="author" 
+                    required
+                />
+                <label for="genre">
+                    Genre *
+                </label>
+                <input 
+                    type="text" 
+                    id="genre" 
+                    name="genre" 
+                    required
+                />
+               <label for="read">
+                <input type="checkbox" id="read">
+                Book Read?
+               </label>
+            </form>
+        </dialog>
     </main>
 </body>
 </html>
