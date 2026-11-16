@@ -20,7 +20,7 @@ function addBookToLibrary(e){
     console.log(formValues);
     const book = new Book(...formValues);
     console.log(book);
-    // bookAddDialog.close()
+    bookAddDialog.close()
 };
 
 
