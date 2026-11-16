@@ -19,14 +19,14 @@
             <h1>Add Book</h1>
         </button>
         <dialog>
-            <form action="dialog">
-                <label for="book-name">
+            <form id="bookForm">
+                <label for="bookName">
                     Book Name *
                 </label>
                 <input 
                     type="text" 
-                    id="book-name" 
-                    name="book-name" 
+                    id="bookName" 
+                    name="bookName" 
                     required
                 />
                 <label for="author">
@@ -51,6 +51,7 @@
                 <input type="checkbox" id="read">
                 Book Read?
                </label>
+               <input type="submit" id="submit" class="btn">
             </form>
         </dialog>
     </main>

@@ -1,33 +1,31 @@
 const myLibrary = [];
 const addBookBtn = document.querySelector("#add-book");
-const closeBtn = document.querySelector("#close");
+const form = document.querySelector("#bookForm");
 const bookAddDialog = document.querySelector("dialog");
 
-function Book(id, name, genre, author, read) {
+function Book(id, bookName, genre, author, read) {
     this.id = id;
-    this.name = name;
+    this.bookName = bookName;
     this.author = author;
     this.genre = genre;
     this.read = read;
 };
 
-function addBookToLibrary(name,author,genre){
+function addBookToLibrary(e){
+    e.preventDefault();
+    const formData = new FormData(e.target);
     const id = self.crypto.randomUUID();
-    const book = new Book(
-        id, 
-        name,
-        author,
-        genre,
-        read
-    );
-    myLibrary.push(book);
-    console.log(myLibrary);
+    const formValues = Array.from(formData, ([key, value]) => (value));
+    formValues.unshift(id);
+    console.log(formValues);
+    const book = new Book(...formValues);
+    console.log(book);
+    // bookAddDialog.close()
 };
+
 
 addBookBtn.addEventListener("click", () => {
     bookAddDialog.showModal();
 });
 
-closeBtn.addEventListener("click", () => {
-    bookAddDialog.close();
-});
+form.addEventListener("submit", addBookToLibrary);
