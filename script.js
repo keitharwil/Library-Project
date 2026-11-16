@@ -16,9 +16,7 @@ function addBookToLibrary(e){
     const formData = new FormData(e.target);
     const id = self.crypto.randomUUID();
     const formValues = Array.from(formData, ([key, value]) => (value));
-    formValues.unshift(id);
-    console.log(formValues);
-    const book = new Book(...formValues);
+    const book = new Book(id, ...formValues);
     console.log(book);
     bookAddDialog.close()
 };
